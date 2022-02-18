@@ -1,0 +1,36 @@
+.PriorityTemplate {
+  width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .app-title {
+    background: #fccc31;
+    height: 4rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+
+    .title {
+      font-size: 1.5rem;
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .conversion-icon {
+      font-size: 1rem;
+      color: black;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 13px;
+      padding-top: 5px;
+    }
+  }
+
+  .content {
+    background: white;
+  }
+}

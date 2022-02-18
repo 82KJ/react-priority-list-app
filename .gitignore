@@ -24,4 +24,4 @@ yarn-error.log*
 
 src/App.test.js
 src/reportWebVitals.js
-src/seupTest.js
+src/setupTests.js
