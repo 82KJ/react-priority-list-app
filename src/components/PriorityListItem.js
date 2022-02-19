@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   MdCheckBoxOutlineBlank,
   MdCheckBox,
@@ -6,14 +7,19 @@ import {
 import cn from 'classnames';
 import './PriorityListItem.scss';
 
-const PriorityListItem = ({ todo, onRemove }) => {
-  const { id, text, checked } = todo;
+const PriorityListItem = ({ todo, onRemove, onTextToggle }) => {
+  const { id, text, checked, clicked } = todo;
 
   return (
     <div className="PriorityListItem">
       <div className={cn('checkbox', { checked })}>
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{text}</div>
+        <div
+          className={cn('text', { clicked })}
+          onClick={() => onTextToggle(id)}
+        >
+          {text}
+        </div>
       </div>
       <div className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
