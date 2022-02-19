@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import PriorityTemplate from './components/PriorityTemplate';
 import PriorityInsert from './components/PriorityInsert';
 import PriorityList from './components/PriorityList';
 import PrioritySortedTable from './components/PrioritySortedTable';
 
 const App = () => {
-  const [page, setPages] = useState(1)
+  const [page, setPages] = useState(1);
 
   const [todos, setTodos] = useState([
     {
@@ -25,19 +25,33 @@ const App = () => {
     },
   ]);
 
+  const nextId = useRef(4);
+
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextId.current,
+        text,
+        checked: false,
+      };
+      setTodos(todos.concat(todo));
+      nextId.current += 1;
+    },
+    [todos],
+  );
+
   return (
     <PriorityTemplate setPages={setPages}>
-      {
-        page === 1 ?
+      {page === 1 ? (
         <>
-          <PriorityInsert />
-          <PriorityList todos={todos}/>
+          <PriorityInsert onInsert={onInsert} />
+          <PriorityList todos={todos} />
         </>
-        :
+      ) : (
         <>
-          <PrioritySortedTable todos={todos}/>
+          <PrioritySortedTable todos={todos} />
         </>
-      }
+      )}
     </PriorityTemplate>
   );
 };
