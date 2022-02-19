@@ -40,12 +40,19 @@ const App = () => {
     [todos],
   );
 
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos],
+  );
+
   return (
     <PriorityTemplate setPages={setPages}>
       {page === 1 ? (
         <>
           <PriorityInsert onInsert={onInsert} />
-          <PriorityList todos={todos} />
+          <PriorityList todos={todos} onRemove={onRemove}/>
         </>
       ) : (
         <>
