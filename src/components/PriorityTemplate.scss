@@ -12,6 +12,28 @@
     font-weight: 700;
     padding-bottom: 13px;
 
+    .icon {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 2px;
+
+      .conversion-icon1 {
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        background: #fccc31;
+        cursor: pointer;
+      }
+
+      .conversion-icon2 {
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        background: #fccc31;
+        cursor: pointer;
+      }
+    }
+
     .title {
       font-size: 1.5rem;
       color: white;
@@ -19,15 +41,6 @@
       align-items: flex-start;
       justify-content: center;
       text-shadow: 0 0 2px #000;
-    }
-
-    .conversion-icon {
-      font-size: 1rem;
-      color: black;
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 13px;
-      padding-top: 5px;
     }
   }
 

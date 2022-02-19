@@ -2,8 +2,11 @@ import { useState } from 'react';
 import PriorityTemplate from './components/PriorityTemplate';
 import PriorityInsert from './components/PriorityInsert';
 import PriorityList from './components/PriorityList';
+import PrioritySortedTable from './components/PrioritySortedTable';
 
 const App = () => {
+  const [page, setPages] = useState(1)
+
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -23,9 +26,18 @@ const App = () => {
   ]);
 
   return (
-    <PriorityTemplate>
-      <PriorityInsert />
-      <PriorityList todos={todos}/>
+    <PriorityTemplate setPages={setPages}>
+      {
+        page === 1 ?
+        <>
+          <PriorityInsert />
+          <PriorityList todos={todos}/>
+        </>
+        :
+        <>
+          <PrioritySortedTable todos={todos}/>
+        </>
+      }
     </PriorityTemplate>
   );
 };
