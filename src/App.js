@@ -67,6 +67,17 @@ const App = () => {
     [todos],
   );
 
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+        ),
+      );
+    },
+    [todos],
+  );
+
   const onTextToggle = useCallback(
     (id) => {
       let new_todos = todos.slice();
@@ -103,6 +114,7 @@ const App = () => {
           <PriorityList
             todos={todos}
             onRemove={onRemove}
+            onToggle={onToggle}
             onTextToggle={onTextToggle}
           />
         </>

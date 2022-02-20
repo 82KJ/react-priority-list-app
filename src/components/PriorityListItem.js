@@ -7,13 +7,13 @@ import {
 import cn from 'classnames';
 import './PriorityListItem.scss';
 
-const PriorityListItem = ({ todo, onRemove, onTextToggle }) => {
+const PriorityListItem = ({ todo, onRemove, onToggle, onTextToggle }) => {
   const { id, text, checked, clicked } = todo;
 
   return (
     <div className="PriorityListItem">
       <div className={cn('checkbox', { checked })}>
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <div onClick={() => onToggle(id)}>{checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</div>
         <div
           className={cn('text', { clicked })}
           onClick={() => onTextToggle(id)}
