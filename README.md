@@ -1,70 +1,38 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task Priority Management App              
 
-## Available Scripts
+## 스택
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
 
-In the project directory, you can run:
+## 개요
+[Schedule Management App](https://github.com/82KJ/react-todo-list-app) 에 일부 기능을 추가하여 Upgrade한 프로젝트
 
-### `yarn start`
+React를 이용한 간단한 `업무 우선순위 관리 웹 어플리케이션`으로 기본적인 추가, 삭제, 수정 기능과 더불어서 업무 진행 순서를 표기하는 Table을 따로 구현했다
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기능 설명
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 1. 항목 추가
+상단의 input란에 할 일을 작성하고 `+` Button을 클릭하면 할 일 목록이 추가된다
 
-### `yarn test`
+<img src="https://user-images.githubusercontent.com/45115733/154830867-6be86d5c-6b4e-4951-bebb-afa8da1b40c4.png" width="430" height="300"/>  &nbsp; &nbsp;  <img src="https://user-images.githubusercontent.com/45115733/154830643-096ccee0-1be9-4e95-8ab0-a33ab915e72d.png" width="430" height="300"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+이때, 특정 Task 뒤에 추가하고 싶으면, 해당 Task를 클릭하고 진행하면 된다
 
-### `yarn build`
+<img src="https://user-images.githubusercontent.com/45115733/154830964-e597a1f2-adfe-4aaa-a2cb-84070e129d1d.png" width="430" height="300"/>  &nbsp; &nbsp;  <img src="https://user-images.githubusercontent.com/45115733/154830975-285fcdbf-cd4c-404f-8706-89f8dc47fa71.png" width="430" height="300"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 2. 항목 삭제
+각 항목의 `-` Button을 클릭하면 각 항목이 제거된다
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://user-images.githubusercontent.com/45115733/154831013-74f2977a-3949-4ffd-9282-1ad3ecadc56c.png" width="430" height="200"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 3. 체크 수정
+각 항목의 체크 박스를 클릭하여 현재 상태를 갱신할 수 있도록 한다
 
-### `yarn eject`
+<img src="https://user-images.githubusercontent.com/45115733/154831047-7e2f8fb9-e8c4-4c86-9320-27746c236e8a.png" width="430" height="240"/>  &nbsp; &nbsp; <img src="https://user-images.githubusercontent.com/45115733/154831051-0e8a6162-39b4-4212-97d8-7110d7195ed6.png" width="430" height="240"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 4. 업무 우선 순위 List 표시
+우측 상단의 아이콘 <img src="https://user-images.githubusercontent.com/45115733/154831144-b287bf1e-26ed-4dad-bd39-4964775b5dc6.png" width="25" height="25"/>을 클릭하면, 현재까지 작성한 업무 우선순위를 반영하여 리스트 형식으로 표시한다.  
+업무 리스트를 다시 수정하고 싶다면, 우측 상단의 아이콘<img src="https://user-images.githubusercontent.com/45115733/154831246-fb9e711f-8d63-4ae3-a2ba-c0d17bc7bb26.png" width="25" height="25"/>을 클릭해서 첫 화면으로 돌아간다
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://user-images.githubusercontent.com/45115733/154831313-64b607e8-471c-4fcb-8bcc-1dff65d34d78.png" width="430" height="330"/> &nbsp; &nbsp; <img src="https://user-images.githubusercontent.com/45115733/154831347-b83e9b8a-4cc7-4806-afef-73b073916e78.png" width="430" height="330"/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
